@@ -1,0 +1,20 @@
+.btn {
+    -fx-background-color: none;
+    -fx-border-color: lightSkyBlue;
+    -fx-border-radius: 5px;
+}
+
+.btn:hover {
+    -fx-background-color: #EEE;
+}
+
+.input {
+    -fx-background-color: none;
+    -fx-border-color: whitesmoke whitesmoke gray whitesmoke;
+}
+
+.input:focused {
+    -fx-border-color: whitesmoke whitesmoke red whitesmoke;
+}
+
+

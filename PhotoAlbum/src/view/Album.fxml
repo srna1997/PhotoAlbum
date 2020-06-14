@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane prefHeight="545.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Album">
+    <children>
+        <ButtonBar layoutX="164.0" layoutY="331.0" prefHeight="51.0" prefWidth="407.0" />
+        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#vratiNazad" prefHeight="37.0" prefWidth="78.0" styleClass="btn" stylesheets="@style.css" text="Nazad" textFill="RED" />
+        <TableView fx:id="slikaView" layoutX="14.0" layoutY="66.0" prefHeight="470.0" prefWidth="552.0">
+            <columns>
+                <TableColumn fx:id="nazivTblCol" onEditCommit="#editNazivSlikeToDatabase" prefWidth="75.0" sortType="DESCENDING" text="Naziv" />
+                <TableColumn fx:id="slikaTblCol" prefWidth="127.20001220703125" sortType="DESCENDING" text="Slika" />
+            <TableColumn fx:id="datumTblCol" prefWidth="75.0" sortType="DESCENDING" text="Datum" />
+            </columns>
+        </TableView>
+        <Button layoutX="574.0" layoutY="497.0" mnemonicParsing="false" onAction="#brisiSLiku" prefHeight="38.0" prefWidth="170.0" styleClass="btn" stylesheets="@style.css" text="Izbriši sliku" textFill="#e84040" />
+        <ImageView fx:id="ucitanaSlika" fitHeight="112.0" fitWidth="135.0" layoutX="607.0" layoutY="82.0" onMouseClicked="#openFileDialog" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../image/cc.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="609.0" layoutY="220.0" prefHeight="18.0" prefWidth="106.0" text="Unesi naziv slike">
+            <textFill>
+                <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.9710526466369629" green="0.026973683387041092" blue="0.026973683387041092" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </RadialGradient>
+            </textFill>
+        </Label>
+          <Button layoutX="599.0" layoutY="309.0" mnemonicParsing="false" onAction="#dodajSliku" prefHeight="43.0" prefWidth="119.0" styleClass="btn" stylesheets="@style.css" text="Učitaj sliku" textFill="RED" />
+          <TextField fx:id="nazivTxt" layoutX="589.0" layoutY="238.0" prefHeight="27.0" prefWidth="146.0" styleClass="input" stylesheets="@style.css" />
+      <Button layoutX="574.0" layoutY="442.0" mnemonicParsing="false" onAction="#dodajOmiljenuSliku" prefHeight="38.0" prefWidth="170.0" styleClass="btn" stylesheets="@style.css" text="Dodaj u omiljene" textFill="#ed3535" wrapText="true" />
+    </children>
+</AnchorPane>

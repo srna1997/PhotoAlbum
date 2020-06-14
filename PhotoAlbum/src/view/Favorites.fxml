@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="538.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Favorites">
+   <children>
+      <TableView fx:id="favoritesView" layoutX="48.0" layoutY="69.0" prefHeight="335.0" prefWidth="662.0">
+        <columns>
+          <TableColumn fx:id="nazivTblCol" prefWidth="100.0" text="Naziv" />
+          <TableColumn fx:id="slikaTblCol" maxWidth="200.0" prefWidth="148.00001525878906" text="Slika" />
+        </columns>
+      </TableView>
+      <Label layoutX="285.0" layoutY="14.0" prefHeight="38.0" prefWidth="187.0" text="Omiljene slike" textFill="#ff3333" wrapText="true">
+         <font>
+            <Font name="Arial Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="48.0" layoutY="424.0" mnemonicParsing="false" onAction="#nazad" prefHeight="46.0" prefWidth="90.0" styleClass="btn" stylesheets="@style.css" text="Nazad" textFill="#e23838" wrapText="true" />
+      <Button layoutX="588.0" layoutY="424.0" mnemonicParsing="false" onAction="#deleteFavorite" prefHeight="46.0" prefWidth="90.0" styleClass="btn" stylesheets="@style.css" text="Obriši" textFill="#f23030" />
+   </children>
+</AnchorPane>

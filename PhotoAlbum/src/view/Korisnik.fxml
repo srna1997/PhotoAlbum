@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="513.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Korisnik">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutX="-167.0" layoutY="-54.0" prefHeight="568.0" prefWidth="952.0">
+        <items>
+          <AnchorPane prefHeight="445.0" prefWidth="598.0">
+               <children>
+                  <SplitPane dividerPositions="0.5687455705173636" layoutX="172.0" layoutY="53.0" orientation="VERTICAL" prefHeight="577.6" prefWidth="518.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <Button layoutX="235.0" layoutY="159.0" mnemonicParsing="false" onAction="#openFavorites" styleClass="btn" stylesheets="@style.css" text="Omiljene Slike" textFill="#ff4d4d">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children></AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="241.0" prefWidth="243.0">
+                           <children>
+                              <Label fx:id="loggedUserLbl" layoutX="197.0" layoutY="16.0" prefHeight="26.0" prefWidth="81.0" text="Label">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="358.0" layoutY="199.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="97.0" styleClass="btn" stylesheets="@style.css" text="Odjava" textFill="RED" />
+                           </children></AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="446.4" prefWidth="600.0">
+               <children>
+                  <ButtonBar layoutX="14.0" layoutY="401.0" prefHeight="67.0" prefWidth="396.0">
+                    <buttons>
+                        <TextField fx:id="nazivAlbumTxt" prefHeight="34.0" prefWidth="211.0" styleClass="input" stylesheets="@style.css" />
+                        <Button mnemonicParsing="false" onAction="#createAlbum" prefHeight="35.0" styleClass="btn" stylesheets="@style.css" text="Kreiraj novi album" textFill="RED" />
+                    </buttons>
+                  </ButtonBar>
+                  <ButtonBar layoutX="14.0" layoutY="339.0" prefHeight="40.0" prefWidth="356.0">
+                    <buttons>
+                        <Button mnemonicParsing="false" onAction="#brisiAlbum" prefHeight="33.0" prefWidth="142.0" styleClass="btn" stylesheets="@style.css" text="Izbriši album" textFill="RED" />
+                      <Button mnemonicParsing="false" onAction="#otvoriAlbum" prefHeight="33.0" styleClass="btn" stylesheets="@style.css" text="Otvori album" textFill="RED" />
+                    </buttons>
+                  </ButtonBar>
+                  <Label fx:id="uspjehLbl" layoutX="77.0" layoutY="380.0" prefHeight="27.0" prefWidth="136.0" text="Izbrisali ste album" textAlignment="CENTER" textFill="#00ff0d" visible="false">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="AlbumView" layoutX="-1.0" layoutY="53.0" prefHeight="220.0" prefWidth="470.0">
+                    <columns>
+                      <TableColumn fx:id="nazivAlbumaCol" onEditCommit="#editNazivAlbumaToDatabase" prefWidth="75.0" sortType="DESCENDING" sortable="false" text="Naziv Albuma" />
+                      <TableColumn fx:id="kreiranCol" prefWidth="75.0" sortType="DESCENDING" sortable="false" text="Kreiran" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

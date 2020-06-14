@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Login">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.0" minWidth="10.0" prefWidth="214.4" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="467.0" minWidth="10.0" prefWidth="433.20000000000005" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="201.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="201.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="191.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="127.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="118.79999999999995" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="Unesite korisničko ime" textFill="#ed2a2a" GridPane.rowIndex="1">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></Label>
+      <Label text="Unesite lozinku" textFill="#e52c2c" GridPane.rowIndex="2">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></Label>
+      <TextField fx:id="korisnickoImeTxt" prefHeight="31.0" prefWidth="403.0" styleClass="input" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin></TextField>
+      <PasswordField fx:id="lozinkaTxt" prefHeight="39.0" prefWidth="430.0" styleClass="input" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </PasswordField>
+      <Label styleClass="heading" stylesheets="@style.css" text="Dobrodošli u Album" textFill="#e55127" wrapText="true" GridPane.columnIndex="1">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="greskaLbl" text="Molimo unesite vaše korisničke podatke" textFill="RED" visible="false" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Label>
+      <Label fx:id="uspjehLbl" prefHeight="21.0" prefWidth="199.0" text="Uspješno ste unijeli podatke" textFill="#0f8d33" visible="false" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Label>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <buttons>
+            <Button fx:id="odustaniBtn" mnemonicParsing="false" onAction="#odustani" styleClass="btn" stylesheets="@style.css" text="Odustani" textFill="#c7603e" />      <Button fx:id="prijaviSeBtn" mnemonicParsing="false" onAction="#prijaviSe" styleClass="btn" stylesheets="@style.css" text="Prijavi se" textFill="#e84b46" />
+         </buttons>
+      </ButtonBar>
+
+
+   </children>
+</GridPane>

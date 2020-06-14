@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="852.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Admin">
+    <children>
+      <TextField fx:id="ime" layoutX="606.0" layoutY="120.0" prefHeight="33.0" prefWidth="222.0" styleClass="input" stylesheets="@style.css" />
+        <TextField fx:id="prezime" layoutX="607.0" layoutY="177.0" prefHeight="33.0" prefWidth="222.0" styleClass="input" stylesheets="@style.css" />
+        <PasswordField fx:id="lozinka" layoutX="612.0" layoutY="368.0" prefHeight="33.0" prefWidth="222.0" styleClass="input" stylesheets="@style.css" />
+        <Button fx:id="addUserBtn" layoutX="652.0" layoutY="425.0" mnemonicParsing="false" onAction="#addUserToDatabase" prefHeight="33.0" prefWidth="156.0" styleClass="btn" stylesheets="@style.css" text="Dodaj korisnika" textFill="RED" />
+        <Label layoutX="550.0" layoutY="126.0" text="Ime" />
+        <Label layoutX="536.0" layoutY="184.0" text="Prezime" />
+        <Label layoutX="538.0" layoutY="374.0" text="Lozinka" />
+        <Label fx:id="loggedUserLbl" layoutX="27.0" layoutY="18.0" prefHeight="27.0" prefWidth="407.0" text="Label" wrapText="true">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Button layoutX="723.0" layoutY="15.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="105.0" styleClass="btn" stylesheets="@style.css" text="Odjava" textFill="RED" />
+      <TableView fx:id="tableView" layoutX="13.0" layoutY="63.0" prefHeight="461.0" prefWidth="457.0">
+        <columns>
+          <TableColumn fx:id="imeTblCol" onEditCommit="#editImeToDatabase" prefWidth="75.0" text="Ime" />
+          <TableColumn fx:id="prezimeTblCol" onEditCommit="#editPrezimeToDatabase" prefWidth="75.0" text="Prezime" />
+            <TableColumn fx:id="korImeTblCol" prefWidth="124.0" text="Korisničko ime" />
+            <TableColumn fx:id="ulogaTblCol" prefWidth="76.0" text="Uloga" />
+        </columns>
+      </TableView>
+      <Label layoutX="555.0" layoutY="314.0" text="Uloga" />
+      <TextField fx:id="uloga" layoutX="612.0" layoutY="308.0" prefHeight="33.0" prefWidth="222.0" styleClass="input" stylesheets="@style.css" />
+      <TextField fx:id="korIme" layoutX="612.0" layoutY="238.0" prefHeight="33.0" prefWidth="222.0" styleClass="input" stylesheets="@style.css" />
+      <Label layoutX="492.0" layoutY="244.0" text="Korisničko ime" />
+      <Button layoutX="657.0" layoutY="481.0" mnemonicParsing="false" onAction="#deleteUserFromDatabase" prefHeight="33.0" prefWidth="156.0" styleClass="btn" stylesheets="@style.css" text="Izbriši korisnika" />
+
+    </children>
+</AnchorPane>
